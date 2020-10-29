@@ -14,6 +14,18 @@ We created some scatter plots to examine relationships between weather variables
 * Cloudiness (%) vs. Latitude
 * Wind Speed (mph) vs. Latitude
 
+There is a definite relationshiop between temperature and latitude.  The weather is warmer closer to the equator (Latitude = 0).  This is due to the shape of Earth.  
+Earth is widest at the equator.  Even though the Earth rotates on a slightly tilted axis, the widest part of the planet is always closer to the sun than the poles, which are the most narrow.
+Closer to the sun means warmer temperatures, even at night.
+
+Humidity is the presence of water vapor in the atmosphere.  When water evaporates, it rises into the air, and the air becomes more humid. 
+Hot places tend to be more humid than cool places because water evaporates faster in warm weather.
+I would have expected to see more pronounced results in this graph, but the humidity seems to be all over the place.  This could be because there just isn't a lot of water vapor in certain areas.
+
+Clouds are also caused by water vapor, so I would expect to see less clouds where there is less humidity.  Much like the humidity chart, cloudiness seems to have little correlation to latitude.
+
+Wind speed is caused by atmospheric pressure, not latitude and this graph illustrates the wide variety of wind speeds over latitudes.
+
 
 We ran a linear regression on each relationship, only this time separating them into Northern and Southern Hemispheres:
 
@@ -28,12 +40,22 @@ We ran a linear regression on each relationship, only this time separating them 
 
 After each pair of plots explain what the linear regression is modeling such as any relationships you notice and any other analysis you may have.
 
-Your final notebook must:
+In the Northern Hemisphere, the linear regression for temp vs. latitude is illustrating how the temperature is highest closest to the equator and drops as you move away from the equator towards the North Pole.
+The Southern Hemisphere linear regression shows the same, with weather coldest closest to the South Pole, increasing as you move closer to the equator.
 
-* Randomly select **at least** 500 unique (non-repeat) cities based on latitude and longitude.
-* Perform a weather check on each of the cities using a series of successive API calls.
-* Include a print log of each city as it's being processed with the city number and city name.
-* Save a CSV of all retrieved data and a PNG image for each scatter plot.
+The linear regression for humidity vs. latitude shows humidity slightly increasing as you move north of the equator. 
+However, the Southern Hemisphere shows humidity increasing as you move towards the equator.
+We have to take into consideration that our data is from the month of October.  While the northern hemisphere is going through the fall season, the southern hemisphere is going through spring.
+Humidity can be affected by how much water is present (oceans, lakes) and also topography (mountains, valleys).
+
+Our linear regression for clouds vs. latitude seem to indicate that cloudiness increases as you move north of the equator, and increases as you move south of the equator.
+The amount of data scattered on these graphs indicate that there are other factors affecting clouds.  
+Again, we need to remember that the southern hemisphere is heading into summer, and we would expect sunnier days.
+
+The linear regression for wind speed shows wind speed increasing as you move away from the equator, either north or south.
+However wind speeds varied from 0 - 25 mph.  
+I would recommend a more in-depth study of wind, with data being collected at multiple times during the day and averaged, and also on multiple days throughout the year.
+These graphs don't really show a strong correlation between wind speed and latitude. 
 
 ### Part II - VacationPy
 
